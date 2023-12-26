@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./irrigation.css">
+    <title>Agriculture Irrigation System</title>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Agriculture Irrigation System</h1>
+        <div class="schedule">
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime">
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime">
+            <button onclick="setIrrigationSchedule()">Set Schedule</button>
+        </div>
+        <div class="status">
+            <h2>Current Status:</h2>
+            <p id="statusText">Irrigation is currently OFF.</p>
+            <button onclick="toggleIrrigation()">Toggle Irrigation</button>
+        </div>
+    </div>
+
+    <div id="stopwatch-container" class="stopwatch-container">
+        <div id="stopwatch-box" class="stopwatch-box">
+            <p id="stopwatch-text">00:00:00</p>
+            <button onclick="stopStopwatch()">Stop</button>
+        </div>
+    </div>
+
+    <script src="./irrigation.js"></script>
+</body>
+</html>
